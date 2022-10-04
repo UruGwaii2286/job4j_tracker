@@ -1,4 +1,4 @@
-package ru.ru.job4j.oop;
+package ru.job4j.oop;
 
 public class Jukebox {
 
