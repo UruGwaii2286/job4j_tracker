@@ -31,11 +31,9 @@ public class Calculator {
         System.out.println(rsl1);
         int result2 = minus(15);
         System.out.println(result2);
-        Calculator calculator2 = new Calculator();
-        int rsl3 = calculator2.divide(50);
+        int rsl3 = calculator.divide(50);
         System.out.println(rsl3);
-        Calculator calculator3 = new Calculator();
-        int rsl4 = calculator3.sumAllOperation(15);
+        int rsl4 = calculator.sumAllOperation(15);
         System.out.println(rsl4);
     }
 }
