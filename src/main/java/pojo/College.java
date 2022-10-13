@@ -9,6 +9,6 @@ public class College {
         student.setGroup(3);
         student.setDate(new Date());
 
-        System.out.println(student.getFio() + " поступил в группу " + student.getGroup() + " " + student.getDate());
+        System.out.println(student.getFio() + " joined the group" + student.getGroup() + " " + student.getDate());
     }
 }
