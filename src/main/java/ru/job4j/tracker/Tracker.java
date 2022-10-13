@@ -40,4 +40,26 @@ public class Tracker {
         }
         return rsl;
     }
+
+    private int indexOf(int id) {
+        int rsl = -1;
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
+
+    public boolean replace(int id, Item iTem) {
+        int index = indexOf(id);
+        boolean temp = false;
+        if (index != -1) {
+            items[index] = iTem;
+            items[index].setId(id);
+            temp = true;
+        }
+        return temp;
+    }
 }
