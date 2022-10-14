@@ -52,14 +52,14 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean replace(int id, Item iTem) {
+    public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        boolean temp = false;
+        boolean resault1 = false;
         if (index != -1) {
-            items[index] = iTem;
-            items[index].setId(id);
-            temp = true;
+            item.setId(id);
+            items[index] = item;
+            resault1 = true;
         }
-        return temp;
+        return resault1;
     }
 }
