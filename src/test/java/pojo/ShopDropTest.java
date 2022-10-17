@@ -1,6 +1,9 @@
 package pojo;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.pojo.Product;
+import ru.job4j.pojo.ShopDrop;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ShopDropTest {
