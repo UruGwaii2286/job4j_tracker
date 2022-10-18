@@ -18,7 +18,6 @@ public class MagicBall {
             break;
            default:
             System.out.println("Может быть");
-
         }
     }
 }
