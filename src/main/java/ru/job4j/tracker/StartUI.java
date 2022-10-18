@@ -15,7 +15,7 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);
-                System.out.println("Добавленная заявка: " + item);
+                System.out.println("Р”РѕР±Р°РІР»РµРЅРЅР°СЏ Р·Р°СЏРІРєР°: " + item);
             } else if (select == 1) {
                 System.out.println("=== Show all items ===");
                 Item[] items = tracker.findAll();
@@ -24,7 +24,7 @@ public class StartUI {
                         System.out.println(item);
                     }
                 } else {
-                    System.out.println("Хранилище еще не содержит заявок.");
+                    System.out.println("РҐСЂР°РЅРёР»РёС‰Рµ РµС‰Рµ РЅРµ СЃРѕРґРµСЂР¶РёС‚ Р·Р°СЏРІРѕРє.");
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit item ===");
@@ -34,18 +34,18 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 if (tracker.replace(id, item)) {
-                    System.out.println("Заявка изменена успешно.");
+                    System.out.println("Р—Р°СЏРІРєР° РёР·РјРµРЅРµРЅР° СѓСЃРїРµС€РЅРѕ.");
                 } else {
-                    System.out.println("Ошибка замены заявки.");
+                    System.out.println("РћС€РёР±РєР° Р·Р°РјРµРЅС‹ Р·Р°СЏРІРєРё.");
                 }
             } else if (select == 3) {
                 System.out.println("=== Delete item ===");
                 System.out.print("Enter id: ");
                 int id = Integer.parseInt(scanner.nextLine());
                 if (tracker.delete(id)) {
-                    System.out.println("Заявка удалена успешно.");
+                    System.out.println("Р—Р°СЏРІРєР° СѓРґР°Р»РµРЅР° СѓСЃРїРµС€РЅРѕ.");
                 } else {
-                    System.out.println("Ошибка удаления заявки.");
+                    System.out.println("РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ Р·Р°СЏРІРєРё.");
                 }
             } else if (select == 4) {
                 System.out.println("=== Find item by id ===");
@@ -55,7 +55,7 @@ public class StartUI {
                 if (item != null) {
                     System.out.println(item);
                 } else {
-                    System.out.println("Заявка с введенным id: " + id + " не найдена.");
+                    System.out.println("Р—Р°СЏРІРєР° СЃ РІРІРµРґРµРЅРЅС‹Рј id: " + id + " РЅРµ РЅР°Р№РґРµРЅР°.");
                 }
             } else if (select == 5) {
                 System.out.println("=== Find items by name ===");
@@ -67,7 +67,7 @@ public class StartUI {
                         System.out.println(item);
                     }
                 } else {
-                    System.out.println("Заявки с именем: " + name + " не найдены.");
+                    System.out.println("Р—Р°СЏРІРєРё СЃ РёРјРµРЅРµРј: " + name + " РЅРµ РЅР°Р№РґРµРЅС‹.");
                 }
             } else if (select == 6) {
                 run = false;
