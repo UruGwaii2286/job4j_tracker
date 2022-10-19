@@ -54,13 +54,13 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        boolean result1 = false;
+        boolean result = false;
         if (index != -1) {
             item.setId(id);
             items[index] = item;
-            result1 = true;
+            result = true;
         }
-        return result1;
+        return result;
     }
 
     public boolean delete(int id) {
