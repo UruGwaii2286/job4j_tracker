@@ -1,4 +1,4 @@
-package pojo;
+package ru.job4j.pojo;
 
 import org.junit.jupiter.api.Test;
 import ru.job4j.pojo.License;
