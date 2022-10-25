@@ -3,12 +3,12 @@ package ru.job4j.tracker;
 public class Bus implements Transport {
     @Override
      public void drive() {
-        return;
+        System.out.println();
     }
 
     @Override
-    public int passengers(int number) {
-        return number;
+    public void passengers(int number) {
+        System.out.println(number);
     }
 
     @Override
