@@ -1,16 +1,12 @@
 package ru.job4j.ex;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class FactTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    @Test(expected = IllegalArgumentException.class)
-    public void whenNLessThen0() {
-        int rsl = Fact.calc(-1);
+class FactTest {
+        @Test
+        public void whenNGreaterThen0() {
+            int rsl = Fact.calc(1);
+        }
     }
-
-    @Test
-    public void whenNGreaterThen0() {
-        int rsl = Fact.calc(1);
-    }
-}
