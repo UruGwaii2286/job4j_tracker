@@ -33,16 +33,16 @@ public class PasswordValidator {
             }
         }
         if (!upper) {
-            throw new IllegalArgumentException("Password should contain at least one uppercase letter.");
+            throw new IllegalArgumentException("Password should contain at least one uppercase letter");
         }
         if (!lower) {
-            throw new IllegalArgumentException("Password should contain at least one lowercase letter.");
+            throw new IllegalArgumentException("Password should contain at least one lowercase letter");
         }
         if (!digit) {
-            throw new IllegalArgumentException("Password should contain at least one figure.");
+            throw new IllegalArgumentException("Password should contain at least one figure");
         }
         if (!special) {
-            throw new IllegalArgumentException("Password should contain at least one special symbol.");
+            throw new IllegalArgumentException("Password should contain at least one special symbol");
         }
         for (String s : INVALID_STRINGS) {
             if (password.toLowerCase().contains(s)) {
