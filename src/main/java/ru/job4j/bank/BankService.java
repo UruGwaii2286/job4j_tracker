@@ -13,13 +13,7 @@ public class BankService {
     }
 
     public boolean deleteUser(String passport) {
-        for (Map.Entry<User, List<Account>> entry: users.entrySet()) {
-            if (passport.equals(entry.getKey().getPassport())) {
-                users.remove(entry.getKey());
-                return true;
-            }
-        }
-        return false;
+        return users.remove(new User(passport, "")) != null;
     }
 
     public void addAccount(String passport, Account account) {
@@ -45,26 +39,26 @@ public class BankService {
 
     public Account findByRequisite(String passport, String requisite) {
          User user = findByPassport(passport);
-         Account userAccount = null;
+         Account result = null;
          if (user != null) {
-             for (Account findAccount : users.get(user)) {
-                 if (findAccount.getRequisite().equals(requisite)) {
-                     userAccount = findAccount;
+             for (Account account : users.get(user)) {
+                 if (account.getRequisite().equals(requisite)) {
+                     result = account;
                      break;
                  }
              }
          }
-         return userAccount;
+         return result;
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         boolean rsl = false;
-        Account accountSrc = findByRequisite(srcPassport, srcRequisite);
-        Account accountDest = findByRequisite(destPassport, destRequisite);
-        if (accountSrc != null && accountDest != null && accountSrc.getBalance() >= amount) {
-            accountDest.setBalance(amount + accountDest.getBalance());
-            accountSrc.setBalance(accountSrc.getBalance() - amount);
+        Account source = findByRequisite(srcPassport, srcRequisite);
+        Account destination = findByRequisite(destPassport, destRequisite);
+        if (source != null && destination != null && source.getBalance() >= amount) {
+            destination.setBalance(amount + destination.getBalance());
+            source.setBalance(source.getBalance() - amount);
             rsl = true;
         }
         return rsl;
