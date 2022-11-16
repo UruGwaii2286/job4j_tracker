@@ -12,13 +12,13 @@ public class ItemTest {
     @Test
     public void comparableSort() {
         List<Item> items = Arrays.asList(
-                new Item(2, "A"),
+                new Item(1, "A"),
                 new Item(6, "B"),
                 new Item(3, "C")
         );
         Collections.sort(items);
         List<Item> expected = Arrays.asList(
-                new Item(2, "A"),
+                new Item(1, "A"),
                 new Item(3, "C"),
                 new Item(6, "B")
         );
