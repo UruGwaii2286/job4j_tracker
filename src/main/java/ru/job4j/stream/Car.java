@@ -11,6 +11,8 @@ public class Car {
 
     private double volume;
 
+    private String color;
+
     @Override
     public String toString() {
         return "Car{"
@@ -21,8 +23,6 @@ public class Car {
                 + ", color='" + color + '\''
                 + '}';
     }
-
-    private String color;
 
     static class Builder {
         private String brand;
