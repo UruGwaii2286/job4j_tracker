@@ -1,4 +1,4 @@
-package ru.job4j.map;
+/*package ru.job4j.map;
 
 import java.util.*;
 
@@ -76,3 +76,4 @@ public class AnalyzeByMap {
         return list.get(list.size() - 1);
     }
 }
+ */
